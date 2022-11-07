@@ -1,0 +1,103 @@
+<diagram program="umletino" version="15.0.0"><zoom_level>8</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>0</x><y>864</y><w>168</w><h>56</h></coordinates><panel_attributes>Add
+--
+--
++ Add(Expr, Expr)
++op(double, double) : double
+# opString() : String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>216</x><y>648</y><w>168</w><h>144</h></coordinates><panel_attributes>BinaryExpr
+--
+- expr1 : Expr
+- expr2 : Expr
+# precedence1 : int
+# precedence2 : int
+--
+# BinaryExpr(Expr, Expr) : 
+# op(double, double) : double
+# opString() : String
++ toString(int) : String
++ value(Enviroment) : double</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>616</x><y>328</y><w>168</w><h>64</h></coordinates><panel_attributes>BombCell
+--
+attribut
+--
++ value(Enviroment) : double
++ toString : String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>416</x><y>224</y><w>168</w><h>56</h></coordinates><panel_attributes>&lt;&lt;Cell&gt;&gt;
+--
++ value(Enviroment) : double
++ toString() : String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>816</x><y>328</y><w>168</w><h>56</h></coordinates><panel_attributes>CellFactory
+--
+--
++ makeCell(String) : Cell</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>416</x><y>328</y><w>168</w><h>64</h></coordinates><panel_attributes>CmntCell
+--
+- cmnt : String
+--
++ value(Enviroment) : double
++ toString : String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>368</x><y>864</y><w>168</w><h>56</h></coordinates><panel_attributes>Div
+--
+--
++ Div(Expr, Expr)
++op(double, double) : double
+# opString() : String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>184</y><w>168</w><h>56</h></coordinates><panel_attributes>Enviroment
+--
+--
++ value(String) : double</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>416</x><y>528</y><w>168</w><h>80</h></coordinates><panel_attributes>/Expr/
+--
++ toString() : String
++ toString(int) : String
++ value(Enviroment) : Double</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>216</x><y>328</y><w>168</w><h>64</h></coordinates><panel_attributes>ExprCell
+--
+- expr : Expr
+--
++ value(Enviroment) : double
++ toString : String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>816</x><y>800</y><w>168</w><h>120</h></coordinates><panel_attributes>ExprParser
+--
+- token : int
+- tokenizer : StreamTokenizer
+--
++ build(Reader) : Expr
++ build(String) : Expr
+- expr() : Expr
+- factor() : Expr
+- term() : Expr</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>552</x><y>864</y><w>168</w><h>56</h></coordinates><panel_attributes>Mul
+--
+--
++ Mul(Expr, Expr)
++op(double, double) : double
+# opString() : String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>416</x><y>648</y><w>168</w><h>88</h></coordinates><panel_attributes>Variable
+--
+- name : String 
+--
++Variable(String)
++toString(int) : String
++value(Enviroment) : Double</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>280</y><w>168</w><h>240</h></coordinates><panel_attributes>Sheet
+--
+- sheet : Map&lt;String, Cell&gt;
+- status : Status
+--
++ addCell(String, String) : Void
++ parserExpr(String) : Boolean
++ getStatus() : Status
++ load(Map&lt;String, String&gt;) : Void
++ getCell(String) : Cell
++ clearCell(String) : Void
++ bombExplode(String, Cell) : Boolean
++ value(String) : Double</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>816</x><y>224</y><w>168</w><h>88</h></coordinates><panel_attributes>Status
+--
+- status : String
+--
++ clearStatus() : void
++ getStatus : String
++ setStatus(String) : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>184</x><y>864</y><w>168</w><h>56</h></coordinates><panel_attributes>Sub
+--
+--
++ Sub(Expr, Expr)
++op(double, double) : double
+# opString() : String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>816</x><y>720</y><w>168</w><h>56</h></coordinates><panel_attributes>TestExpr
+--
+--
++ main(String[]) : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>616</x><y>648</y><w>168</w><h>104</h></coordinates><panel_attributes>Num
+--
+- adjustment : NumberAdjustment
+- value : double
+--
++ Num(double) 
++toString(int) : String
++value(Enviroment) : Double</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>288</x><y>600</y><w>144</w><h>64</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>160;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>488</x><y>600</y><w>24</w><h>64</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>576</x><y>600</y><w>136</w><h>64</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;150;60</additional_attributes></element><element><id>Relation</id><coordinates><x>72</x><y>784</y><w>160</w><h>96</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>180;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>256</x><y>784</y><w>24</w><h>96</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>288</x><y>784</y><w>176</w><h>96</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;200;100</additional_attributes></element><element><id>Relation</id><coordinates><x>344</x><y>784</y><w>304</w><h>96</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;360;100</additional_attributes></element><element><id>Relation</id><coordinates><x>72</x><y>232</y><w>24</w><h>64</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>488</x><y>272</y><w>24</w><h>72</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>576</x><y>272</y><w>136</w><h>72</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;150;70</additional_attributes></element><element><id>Relation</id><coordinates><x>288</x><y>272</y><w>144</w><h>72</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>160;10;10;70</additional_attributes></element></diagram>

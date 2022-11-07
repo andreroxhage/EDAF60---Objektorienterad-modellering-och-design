@@ -1,0 +1,124 @@
+<diagram program="umletino" version="15.0.0"><zoom_level>9</zoom_level><help_text>Space for diagram notesWord, Words</help_text><element><id>UMLClass</id><coordinates><x>1935</x><y>153</y><w>189</w><h>90</h></coordinates><panel_attributes>Memory
+--
+-memory : ArrayList&lt;Words&gt;
+-wf : WordFactory
+--
++getWord() : Word</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1503</x><y>153</y><w>189</w><h>90</h></coordinates><panel_attributes>Computer
+--
++memory : Memory
++program : Program
+--
++run() : void
++load(Program) : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2259</x><y>153</y><w>189</w><h>90</h></coordinates><panel_attributes>Address
+--
++index : int
+--
+getWord(Memory) : Word
+toString() : String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1773</x><y>324</y><w>189</w><h>126</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+Word
+--
+--
++getWord(Memory) : Word
++add(Word, Word) : 
++mul(Word, Word) :
++set(Word) : 
++equals(Object) : Boolean
++toString() : String
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2097</x><y>324</y><w>189</w><h>90</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+WordFactory
+--
+--
++word(String) : Word</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2367</x><y>324</y><w>189</w><h>90</h></coordinates><panel_attributes>ByteWordFactory
+--
+--
+word(String) : Word</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2241</x><y>495</y><w>189</w><h>90</h></coordinates><panel_attributes>LongWordFactory
+--
+--
+word(String) : Word</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1908</x><y>495</y><w>189</w><h>117</h></coordinates><panel_attributes>LongWord
+--
+-word : Long
+--
++add(Word, Word) : 
++mul(Word, Word) :
++set(Word) : 
++equals(Object) : Boolean
++toString() : String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1638</x><y>495</y><w>189</w><h>117</h></coordinates><panel_attributes>ByteWord
+--
+-word : Byte
+--
++add(Word, Word) : 
++mul(Word, Word) :
++set(Word) : 
++equals(Object) : Boolean
++toString() : String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1071</x><y>153</y><w>189</w><h>90</h></coordinates><panel_attributes>Program
+--
+-instructions : List&lt;Instruction&gt;
+--
++add(Instruction) : void
++getInstruction(int) : Instruction
++toString() : String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>441</x><y>153</y><w>234</w><h>81</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+Instruction
+--
+--
++execute(Memory, ProgramCounter) : void
++toString() : String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>315</y><w>243</w><h>108</h></coordinates><panel_attributes>Mul
+--
+-operand1 : Operand
+-operand2 : Operand
+-address : Address
+--
++execute(Memory, ProgramCounter) : void
++toString() : String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>261</x><y>342</y><w>225</w><h>81</h></coordinates><panel_attributes>Add
+--
+-operand1 : Operand
+-operand2 : Operand
+-address : Address
+--
++execute(Memory, ProgramCounter) : void
++toString() : String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>504</x><y>342</y><w>225</w><h>81</h></coordinates><panel_attributes>Jump
+--
+-index : int
+--
++execute(Memory, ProgramCounter) : void
++toString() : String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>738</x><y>315</y><w>225</w><h>81</h></coordinates><panel_attributes>Halt
+--
+--
++execute(Memory, ProgramCounter) : void
++toString() : String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>972</x><y>315</y><w>225</w><h>81</h></coordinates><panel_attributes>Print
+--
+-operand : Operand
+--
++execute(Memory, ProgramCounter) : void
++toString() : String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>72</y><w>243</w><h>99</h></coordinates><panel_attributes>JumpEq
+--
+-index : int
+-operand1 : Operand
+-operand2 : Operand
+--
++execute(Memory, ProgramCounter) : void
++toString() : String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>198</y><w>243</w><h>81</h></coordinates><panel_attributes>Copy
+--
+-operand : Operand
+-address : Address
+--
++execute(Memory, ProgramCounter) : void
++toString() : String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1242</x><y>495</y><w>189</w><h>36</h></coordinates><panel_attributes>Sum
+--
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1017</x><y>495</y><w>189</w><h>36</h></coordinates><panel_attributes>Factorial
+--
+--
+ 
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2115</x><y>234</y><w>27</w><h>108</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1926</x><y>234</y><w>27</w><h>108</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>2115</x><y>189</y><w>162</w><h>27</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;160;10</additional_attributes></element><element><id>Relation</id><coordinates><x>2277</x><y>360</y><w>108</w><h>27</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;100;10</additional_attributes></element><element><id>Relation</id><coordinates><x>2277</x><y>405</y><w>27</w><h>108</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>1953</x><y>441</y><w>27</w><h>72</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>1764</x><y>441</y><w>27</w><h>72</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>1683</x><y>189</y><w>270</w><h>27</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>280;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1251</x><y>189</y><w>270</w><h>27</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;280;10</additional_attributes></element><element><id>Relation</id><coordinates><x>666</x><y>189</y><w>423</w><h>27</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>450;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>495</x><y>225</y><w>27</w><h>135</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;130</additional_attributes></element><element><id>Relation</id><coordinates><x>459</x><y>225</y><w>27</w><h>135</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;130</additional_attributes></element><element><id>Relation</id><coordinates><x>234</x><y>225</y><w>225</w><h>108</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>230;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>234</x><y>189</y><w>225</w><h>27</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>230;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>234</x><y>144</y><w>225</w><h>27</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>230;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>666</x><y>225</y><w>99</w><h>108</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;90;100</additional_attributes></element><element><id>Relation</id><coordinates><x>666</x><y>189</y><w>396</w><h>144</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;420;140</additional_attributes></element><element><id>Relation</id><coordinates><x>1197</x><y>234</y><w>27</w><h>279</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;290</additional_attributes></element><element><id>Relation</id><coordinates><x>1233</x><y>234</y><w>27</w><h>279</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;290</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1773</x><y>0</y><w>189</w><h>90</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+Operand
+--
+--
++getWord(Memory) : Word
++toString() : String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1953</x><y>54</y><w>342</w><h>117</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;360;110</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1314</x><y>18</y><w>189</w><h>90</h></coordinates><panel_attributes>ProgramCounter
+--
+-index : int
+--
++get() : int
++set(int) : void
++increase() : void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1494</x><y>81</y><w>126</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;120;80</additional_attributes></element><element><id>Relation</id><coordinates><x>1854</x><y>81</y><w>27</w><h>261</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;270</additional_attributes></element></diagram>
